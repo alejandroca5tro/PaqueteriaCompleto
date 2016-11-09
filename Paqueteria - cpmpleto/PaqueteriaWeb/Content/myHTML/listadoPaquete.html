@@ -1,0 +1,113 @@
+﻿<form class="form-horizontal">
+    <div class="form-group">
+        <label for="NExpedicion" class="col-sm-2 control-label">Nº Expedicion</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.NExpedicion" id="NExpedicion" class="form-control" ng-model="model.NExpedicion" type="text" name="NExpedicion">
+        </div>
+    </div>
+       <div class="form-group">
+        <label for="Agencia" class="col-sm-2 control-label">Agencia</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Agencia" id="Agencia" class="form-control" ng-model="model.Agencia" type="text" name="Agencia">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Volumen" class="col-sm-2 control-label">Volumen</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Volumen" id="Volumen" class="form-control" type="text" ng-model="model.Volumen" name="Volumen">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NBulto" class="col-sm-2 control-label">Nº Bulto</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.NBulto" id="NBulto" class="form-control" type="text" ng-model="model.NBulto" name="NBulto">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Kilos" class="col-sm-2 control-label">Kilos</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Kilos" id="Kilos" class="form-control" type="text" ng-model="model.Kilos" name="Kilos">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="FechaEntrega" class="col-sm-2 control-label">Fecha</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.FechaEntrega" id="FechaEntrega" class="" type="text" ng-model="model.FechaEntrega"  readonly="readonly" name="FechaEntrega">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="TipoPorte" class="col-sm-2 control-label">Tipo Porte</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.TipoPorte" id="TipoPorte" class="form-control" type="text" ng-model="model.TipoPorte" name="TipoPorte">
+        </div>
+    </div>
+    <!--<div class="form-group">
+        <label for="idenvio" class="col-sm-2 control-label">ID Envio</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.EnvioId" id="idenvio" class="form-control" type="text" ng-model="model.EnvioId" name="idenvio">
+        </div>
+    </div>-->
+    <div class="form-group">
+        <label for="Estado" class="col-sm-2 control-label">Estado</label>
+        <div class="col-sm-10">
+            <select ng-disabled="form.estado" id="Estado" class="form-control" type="text" ng-model="model.Estado" name="Estado">
+                <option value="0">Pendiente</option>
+                <option value="1">Entregado</option>
+                     <option value="2">En Reparto</option>
+            </select>
+        </div>
+    </div>
+      <div class="form-group">
+        <label for="Remitente" class="col-sm-2 control-label">Remitente</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Remitente" id="Remitente" class="form-control" type="text" ng-model="model.Remitente" name="Remitente">
+        </div>
+    </div>
+      <div class="form-group">
+        <label for="Destinatario" class="col-sm-2 control-label">Destinatario</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Destinatario" id="Destinatario" class="form-control" type="text" ng-model="model.Destinatario" name="Destinatario">
+        </div>
+    </div>
+
+   <div class="form-group">
+        <label for="Poblacion" class="col-sm-2 control-label">Poblacion</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Poblacion" id="Poblacion" class="form-control" type="text" ng-model="model.Poblacion" name="Poblacion">
+        </div>
+    </div>
+      <div class="form-group">
+        <label for="Cautonoma" class="col-sm-2 control-label">Comunidad Autonoma</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Cautonoma" id="Cautonoma" class="form-control" type="text" ng-model="model.Cautonoma" name="Cautonoma">
+        </div>
+    </div>
+      <div class="form-group">
+        <label for="Ciudad" class="col-sm-2 control-label">Ciudad</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Ciudad" id="Ciudad" class="form-control" type="text" ng-model="model.Ciudad" name="Ciudad">
+        </div>
+    </div>
+
+      <div class="form-group">
+        <label for="Observaciones" class="col-sm-2 control-label">Observaciones</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Observaciones" id="Observaciones" class="form-control" type="text" ng-model="model.Observaciones" name="Observaciones">
+        </div>
+    </div>
+       <!-- <div class="form-group">
+        <label for="Incidencias" class="col-sm-2 control-label">Incidencias</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.Incidencias" id="Incidencias" class="form-control" type="text" ng-model="model.Incidencias" name="Incidencias">
+        </div>
+    </div>-->
+</form>
+<div class="text-right">
+    <button ng-show="LinkButtons.crearEnvio" class="btn btn-md btn-success" ng-click="createenvio()">Crear Envío</button>
+    <button ng-show="LinkButtons.editarEnvio" class="btn btn-md btn-success" ng-click="editEnvio()">Editar Envío</button>
+    <a ng-show="LinkButtons.editar" class="btn btn-md btn-warning" href="#/envio/{{model.EnvioId}}/editar">Editar</a>
+    <button ng-show="LinkButtons.borrar" class="btn btn-md btn-danger" data-ng-really-click="borrarenvio(model.EnvioId)" data-ng-really-message="¿Está seguro de que desea borrar el envío {{model.EnvioId}}">Borrar</button>
+    <a ng-show="LinkButtons.volver" class="btn btn-md btn-default" href="#/">Volver</a><br />
+</div>
+<br />
+

@@ -1,0 +1,22 @@
+﻿
+<body ng-controller="GestionDetallesController">
+    <table>
+        <tr>
+            <td><strong>Id de paquete</strong></td>
+            <td><strong>Tamaño</strong></td>
+            <td><strong>Id Destinatario</strong></td>
+            <td><strong>Fecha Entrega</strong></td>
+            <td><strong>Estado</strong></td>
+        </tr>
+        <tr ng-repeat="detalle in model">
+            <td>{{detalle.PaqueteId}}</td>
+            <td>{{detalle.Tamanyo}}</td>
+            <td>{{detalle.Peso}}</td>
+            <td>{{detalle.Color}}</td>
+            <td>{{detalle.EnvioId}}</td>
+        </tr>
+    </table>
+
+
+</body>
+

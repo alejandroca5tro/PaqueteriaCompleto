@@ -1,0 +1,25 @@
+<table ng-show="form.tablePaquetes" class="table table-striped table-hover">
+    <tr>
+        <th>Falta o no la mercancia</th>
+        <th>Esta rota o no la mercancia</th>
+        <th>Devolver la mercancia</th>
+        <th>Ausencia al entregar la mercancia</th>
+      <!--  <th class="text-right">Operaciones</th> -->
+        
+    </tr>
+    <tr ng-repeat="paquete in paquetes">
+        <td>{{paquete.FRmercancia}}</td>
+        <td>{{paquete.RRmercancia}}</td>
+        <td>{{paquete.DRmercancia}}</td>
+        <td>{{paquete.ARmercancia}}</td>
+        <td class="text-right">
+            <a class="btn btn-xs btn-primary" href="#/paquete/{{paquete.PaqueteId}}">Detalle</a>          
+            <button ng-show="LinkButtons.borrarPaquete" class="btn btn-xs btn-danger" data-ng-really-click="borrarPaquete(paquete.IncidenciaId)" data-ng-really-message="¿Está seguro de que desea borrar el paquete {{paquete.PaqueteId}}">Borrar</button>
+        </td>
+    </tr>
+</table>
+
+<div class="text-left">
+    <a ng-show="LinkButtons.anadirPaquete" class="btn btn-block btn-success" href="#/envio/{{model.EnvioId}}/paquete/create">Añadir paquete</a>
+    <br />
+</div>

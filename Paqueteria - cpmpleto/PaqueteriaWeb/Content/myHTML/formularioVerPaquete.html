@@ -1,0 +1,39 @@
+﻿<form class="form-horizontal">
+    <div class="form-group">
+        <label for="NExpedicion" class="col-sm-2 control-label">Nº Expedicion</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.NExpedicion" id="NExpedicion" class="form-control" ng-model="model.NExpedicion" type="text" name="NExpedicion">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Fmercancia" class="col-sm-2 control-label">Falta o no la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="Fmercancia" value="" aria-label="...">
+</div>
+</div>
+        <div class="form-group">
+        <label for="Rmercancia" class="col-sm-2 control-label">Esta rota o no la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="Rmercancia" value="" aria-label="...">
+</div>
+</div>
+      <div class="form-group">
+        <label for="Dmercancia" class="col-sm-2 control-label">Devolver la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="Dmercancia" value="" aria-label="...">
+</div>
+</div>
+        <div class="form-group">
+        <label for="Amercancia" class="col-sm-2 control-label">Ausencia al entregar la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="Amercancia" value="" aria-label="...">
+</div>
+</div>
+    <div class="form-group">
+        <label for="idenvio" class="col-sm-2 control-label">ID Envio</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.EnvioId" id="idenvio" class="form-control" type="text" ng-model="model.EnvioId" name="idenvio">
+        </div>
+    </div>
+</form>
+<a href="#/envio/{{model.EnvioId}}">Volver</a><br />

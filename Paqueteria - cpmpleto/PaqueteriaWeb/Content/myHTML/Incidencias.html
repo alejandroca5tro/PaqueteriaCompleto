@@ -1,0 +1,56 @@
+<form class="form-horizontal">
+    <!--<div class="form-group">
+        <label for="NExpedicion" class="col-sm-2 control-label">Nº Expedicion</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.NExpedicion" id="NExpedicion" class="form-control" ng-model="model.NExpedicion" type="text" name="NExpedicion">
+        </div>
+    </div>-->
+    <div class="form-group">
+        <label for="FMercancia" class="col-sm-2 control-label">Falta o no la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="FMercancia" value="" aria-label="...">
+</div>
+</div>
+        <div class="form-group">
+        <label for="RMercancia" class="col-sm-2 control-label">Esta rota o no la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="RMercancia" value="" aria-label="...">
+</div>
+</div>
+      <div class="form-group">
+        <label for="DMercancia" class="col-sm-2 control-label">Devolver la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="DMercancia" value="" aria-label="...">
+</div>
+</div>
+        <div class="form-group">
+        <label for="AMercancia" class="col-sm-2 control-label">Ausencia al entregar la mercancia</label>
+      <div class="col-sm-10">
+    <input type="checkbox" id="AMercancia" value="" aria-label="...">
+</div>
+</div>
+<!--
+    <div class="form-group">
+        <label for="idenvio" class="col-sm-2 control-label">ID Envio</label>
+        <div class="col-sm-10">
+            <input ng-disabled="form.EnvioId" id="idenvio" class="form-control" type="text" ng-model="model.EnvioId" name="idenvio">
+        </div>
+    </div>-->
+    <!--<div class="form-group">
+        <label for="Estado" class="col-sm-2 control-label">Estado</label>
+        <div class="col-sm-10">
+            <select ng-disabled="form.estado" id="Estado" class="form-control" type="text" ng-model="model.Estado" name="Estado">
+                <option value="0">Pendiente</option>
+                <option value="1">Entregado</option>
+            </select>
+        </div>
+    </div>-->
+</form>
+<div class="text-right">
+    <button ng-show="LinkButtons.crearIncidencias" class="btn btn-md btn-success" ng-click="createpaquete(true)">Guardar Incidencia</button>
+    <button ng-show="LinkButtons.editarEnvio" class="btn btn-md btn-success" ng-click="editEnvio()">Editar Envío</button>
+        <button ng-show="LinkButtons.editaPaquete" class="btn btn-md btn-success" ng-click="editpaquete()">Editar Incidencia</button>
+    <a ng-show="LinkButtons.editar" class="btn btn-md btn-warning" href="#/envio/{{model.EnvioId}}/editar">Editar</a> 
+        <button ng-show="LinkButtons.borrarPaquete" class="btn btn-md btn-danger" data-ng-really-click="borrarPaquete(model.IncidenciaId)" data-ng-really-message="¿Está seguro de que desea borrar La incidencia">Borrar</button>
+    <a ng-show="LinkButtons.volver" class="btn btn-md btn-default" href="#/">Volver</a><br />
+</div>
